@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(isset($_SESSION['uname'])){
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +12,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to home page</h1>
+    <h1>Welcome <?php echo $_SESSION['uname']; ?>, 
+        
+    
+    thi is home page</h1>
 </body>
 </html>
+
+<?php
+}
+else{
+    header("Location:login.php");
+    exit();
+}
+?>
