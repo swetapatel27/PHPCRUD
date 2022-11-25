@@ -1,8 +1,3 @@
-<?php
-session_start();
-if(isset($_SESSION['uname'])){
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,16 +8,14 @@ if(isset($_SESSION['uname'])){
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome <?php echo $_SESSION['uname']; ?>, 
-thi is home page</h1>
-<a href="logout.php">Log Out</a>
+    <form action="insert.php" method="POST">  
+        UserName: <input type="text" name="uname">
+        <br>
+        Password: <input type="password" name="pswd">   
+        <br>
+        Age: <input type="number" name="age">   
+        <br>
+        <input type="submit" value="Register">
+    </form>
 </body>
 </html>
-
-<?php
-}
-else{
-    header("Location:login.php");
-    exit();
-}
-?>
