@@ -47,7 +47,7 @@ if(mysqli_num_rows($res)>0){
             $id = $row['id'];
             echo "<tr><td>".$row['id']."</td><td>".$row['uname']."</td><td>".$row['age'];
             echo "</td>";
-            echo "<td><a href='delete.php?id=".$id."'>Delete</a></td></tr>";
+            echo "<td> <a href='edit.php?id=".$id."'>Edit</a> | <a href='delete.php?id=".$id."'>Delete</a></td></tr>";
             
             
         }
