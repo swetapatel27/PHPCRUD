@@ -8,12 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="insert.php" method="POST">  
+    <form action="insert.php" method="POST" enctype="multipart/form-data">  
         UserName: <input type="text" name="uname">
         <br>
         Password: <input type="password" name="pswd">   
         <br>
         Age: <input type="number" name="age">   
+        <br>
+        Profile Photo:<input type="file" name="uploadFile">
         <br>
         <input type="submit" value="Register">
     </form>
